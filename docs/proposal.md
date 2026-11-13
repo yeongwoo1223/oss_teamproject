@@ -1,41 +1,31 @@
-# 프로젝트 제안서(Project proposal): "프로젝트 이름(Project name)"
+# 프로젝트 제안서(Project proposal): "음성 인식 기반 노래 검색 프로그램"
 
 ## 1. 프로젝트 주제(Project topic)
 
 ### 만들고 싶은 프로그램(What we want to build)
 
-> 어떤 프로그램을 개발할지 한두 문장으로 설명. (Describe the program you want to build in one or two sentences.)
-
 > 노래를 따라부르거나 멜로디를 흥얼거리면 프로그램이 가진 데이터셋을 기반으로 분석하고 가장 일치율이 높은 노래를 알려주는 프로그램 
 
 ### 사용자 정의 및 해결할 문제(Users and problem)
 
-> 누가, 어떤 상황에서 이 프로그램을 사용하는가? 사용자가 겪는 문제와 이 프로그램이 필요한 이유를 설명. (Explain who will use the program, when they will use it, and what problem it will help them solve.)
-
-> 누구나 지나가다가 들은 노래나 오래전에 들은 노래의 경우, 찾고 싶으나 기억이 나지 않을 때 단순하게 멜로디를 흥얼거리거나 특정 부분을 따라부르는 것만으로도 노래를 찾을 수 있다. 또한, 어떤 작곡가가 노래를 만들고 본인의 작품과 비슷한 노래가 있는지 찾고 싶을때도 사용할 수 있을 것이라 예상한다.
+> 누구나, 지나가다가 들은 노래나 오래전에 들은 노래의 경우, 찾고 싶으나 기억이 나지 않을 때 단순하게 멜로디를 흥얼거리거나 특정 부분을 따라부르는 것만으로도 노래를 찾을 수 있다. 또한, 어떤 작곡가가 노래를 만들고 본인의 작품과 비슷한 노래가 있는지 찾고 싶을때도 사용할 수 있을 것이라 예상한다.
 
 
 ## 2. 개발할 기능(Planned features)
 
 ### 입력(Input)
 
-> 사용자가 제공하는 데이터와 형식 정의 (Describe the data users will provide and its format.)
-
 > 프로그램이 사용자의 음성파일을 확인하면, mp3 파일로 변환함.
 
 ### 처리(Processing)
 
-> 입력을 받은 뒤 프로그램이 수행할 구체적인 작업을 정의. “AI로 처리한다”처럼 모호하게 쓰지 말고, 실제로 개발할 동작을 설명.> (List the specific tasks program will perform. Explain the behavior you will implement rather than using vague descriptions such as “process it with AI.”)
-
-> 1. 사용자가 음성 입력을 하면, wav파일로 변환한다.
+> 1. 사용자가 음성 입력을 하면, mp3파일로 변환한다.
 > 2. 진폭이 가장 큰 단일 음표만 남겨서 멜로디 시퀀스 구성.
 > 3. 사용자별 음역대와 속도 차이를 제거해, 2차원 멜로디 시퀀스 정규화.
 > 4. DB에 존재하는 원곡 보컬 멜로디와 정규화된 사용자 멜로디 간의 DTW 거리를 계산해, 노래를 일부분만 불렀어도 매칭의 최소 거리를 찾아 일치율 점수로 변환.
 > 5. 일치율이 가장 높은 곡을 선별하고 곡명, 아티스트명, 일치율을 화면에 반환.
 
 ### 결과(Output)
-
-> 사용자가 받게 될 결과물이 무엇인지 설명. 파일이라면 형식과 주요 특징도 기술. (Describe the result users will receive. If it is a file, specify its format and main characteristics.)
 
 > 사용자는 곡에 관련된 URL(Youtube, Spotify)를 받을 것이다.
 
@@ -47,6 +37,4 @@
 
 ### 사용 예시(Usage example)
 
-> 사용자가 입력을 준비하고 프로그램을 사용해 결과를 얻는 한 가지 상황을 예시로 설명. 실제 파일이나 실행 결과를 제출할 필요는 없음. (Describe one scenario from preparing the input to receiving the output. You do not need to submit an actual input file or execution result today.)
-
-> 예시(Example): 사용자가 노래 일부분을 부른다. 프로그램은 파일을 저장 및 처리해서 가장 일치율이 높은 노래를 도출한다. 사용자는 마지막 화면에서 곡명, 아티스트명, 일치율, 그리고 URL을 확인할 수 있다.
+> 사용자가 노래 일부분을 부른다. 프로그램은 파일을 저장 및 처리해서 가장 일치율이 높은 노래를 도출한다. 사용자는 마지막 화면에서 곡명, 아티스트명, 일치율, 그리고 URL을 확인할 수 있다.
