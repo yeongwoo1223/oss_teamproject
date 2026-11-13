@@ -1,4 +1,4 @@
-"""Core functions of ossimg. (examples for documentation)"""
+"""Core functions of FindMusic. The functions below are reference examples; we will replace them with our own in Week 11."""
 
 
 def resize(path, width):
