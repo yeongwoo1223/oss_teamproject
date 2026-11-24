@@ -1,0 +1,25 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "findmusic"
+version = "0.1.0"
+description = "Find a song from a hummed melody: melody extraction and matching"
+readme = "README.md"
+license = "MIT"
+requires-python = ">=3.10"
+authors = [{ name = "oss_team08" }]
+dependencies = []
+classifiers = [
+  "Programming Language :: Python :: 3",
+  "Operating System :: OS Independent",
+]
+
+[project.urls]
+Homepage = "https://github.com/yeongwoo1223/oss_teamproject"
+Documentation = "https://yeongwoo1223.github.io/oss_teamproject/"
+Issues = "https://github.com/yeongwoo1223/oss_teamproject/issues"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/findmusic"]
